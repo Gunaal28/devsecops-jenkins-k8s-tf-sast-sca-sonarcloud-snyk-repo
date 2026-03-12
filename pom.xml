@@ -12,14 +12,8 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<easybuggy-port>8080</easybuggy-port>
 		<!-- default properties (JDK 1.7 or earlier) -->
-		<jvm.args.perm.size>-XX:MaxPermSize=128m</jvm.args.perm.size>
-		<jvm.args.gc.log.path>-Xloggc:logs/gc.log</jvm.args.gc.log.path>
-		<jvm.args.print.heap.at.gc>-XX:+PrintHeapAtGC</jvm.args.print.heap.at.gc>
-		<jvm.args.print.gc.details>-XX:+PrintGCDetails</jvm.args.print.gc.details>
-		<jvm.args.print.gc.date.stamps>-XX:+PrintGCDateStamps</jvm.args.print.gc.date.stamps>
-		<jvm.args.gc.log.file.rotation>-XX:+UseGCLogFileRotation</jvm.args.gc.log.file.rotation>
-		<jvm.args.number.of.gc.log.files>-XX:NumberOfGCLogFiles=5</jvm.args.number.of.gc.log.files>
-		<jvm.args.gc.log.file.size>-XX:GCLogFileSize=10M</jvm.args.gc.log.file.size>
+		<jvm.args.perm.size>-XX:MaxMetaspaceSize=256m</jvm.args.perm.size>
+    <jvm.args.gc.log>-Xlog:gc*:file=logs/gc.log:time,uptime:filecount=5,filesize=10m</jvm.args.gc.log>
 	</properties>
 
 	<profiles>
